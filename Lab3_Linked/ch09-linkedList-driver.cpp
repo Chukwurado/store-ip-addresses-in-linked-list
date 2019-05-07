@@ -11,7 +11,6 @@ int findPosition(LinkedList<AddressItem>& list, AddressItem adr);
 int main()
 {
 	LinkedList<AddressItem> list;
-	AddressItem address;
 	AddressItem tempAdr;
 	int foundPosition;
 	int position = 0;
@@ -33,9 +32,7 @@ int main()
 
 		if (foundPosition != 0) {
 			tempAdr = list.getEntry(foundPosition);
-			cout << "Address before: " << tempAdr << endl;
 			tempAdr.Tally();
-			cout << "Address after: " << tempAdr << endl;
 			list.replace(foundPosition, tempAdr);
 		}
 		else {
